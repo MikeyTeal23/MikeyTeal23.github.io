@@ -1,0 +1,24 @@
+﻿.title-txt {
+    color: red;
+}
+
+.white-key {
+    background-color: white;
+    color: black;
+}
+
+.black-key {
+    background-color: black;
+    color: white;
+    
+}
+
+.white-key, .black-key {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 120px 20px;
+}
+
+#pressable-key:active {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 9px 15px 0 rgba(0,0,0,0.19);
+}

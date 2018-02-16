@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Keyboard</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="title-txt jumbotron" id="title">
+        <h1>
+            PIANO
+        </h1>
+    </div>
+
+    <button class="black-key" id="pressable-key" onmousedown="PlayNote('ab')">G#</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('a')">A</button>
+    <button class="black-key" id="pressable-key" onmousedown="PlayNote('db')">A#</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('b')">B</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('c')">C</button>
+    <button class="black-key" id="pressable-key" onmousedown="PlayNote('bb')">C#</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('d')">D</button>
+    <button class="black-key" id="pressable-key" onmousedown="PlayNote('eb')">D#</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('e')">E</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('f')">F</button>
+    <button class="black-key" id="pressable-key" onmousedown="PlayNote('gb')">F#</button>
+    <button class="white-key" id="pressable-key" onmousedown="PlayNote('g')">G</button>
+
+</body>
+</html>
+
+<script>
+    function PlayNote(note) {
+        var snd = new Audio();
+        snd.src = "pianoSounds/piano-" + note + ".wav";
+        snd.play();
+        changeColor();
+    }
+
+    function changeColor() {
+        var whiteKeys = document.getElementsByClassName("white-key").style.background-color = getRandomColor();
+        var blackKeys = document.getElementsByClassName("black-key").style.background-color = getRandomColor();
+        document.getElementById("title").style.color = getRandomColor();
+    }
+
+    function getRandomColor() {
+        var letters = '0123456789ABCDEF';
+        var color = '#';
+        for (var i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+        }
+        return color;
+    }
+   
+</script>
