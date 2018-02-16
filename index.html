@@ -3,7 +3,8 @@
 <head>
     <meta charset="utf-8" />
     <title>Keyboard</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet/less" type="text/css" href="style.less">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/less.js/2.5.1/less.min.js"></script>
 </head>
 <body>
     <div class="title-txt jumbotron" id="title">
@@ -44,6 +45,7 @@
         var color = getRandomColor();
         for (var i = 0; i < whiteKeys.length; i++){
             whiteKeys[i].style.backgroundColor = color;
+            whiteKeys[i].style.color = color.
         }
         var blackKeys = document.getElementsByClassName("black-key");
         var color = getRandomColor();
@@ -61,62 +63,62 @@
         return color;
     }
 
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "1") {
             PlayNote("ab");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "2") {
             PlayNote("a");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "3") {
             PlayNote("db");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "4") {
             PlayNote("b");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "5") {
             PlayNote("c");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "6") {
             PlayNote("bb");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "7") {
             PlayNote("d");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "8") {
             PlayNote("eb");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "9") {
             PlayNote("e");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "0") {
             PlayNote("f");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "-") {
             PlayNote("gb");
         }
     })
-    document.addEventListener("keypress", function (event) {
+    document.addEventListener("keydown", function (event) {
         if (event.key == "+") {
             PlayNote("g");
         }

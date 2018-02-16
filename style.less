@@ -1,0 +1,26 @@
+﻿@black-key-bkg-color: black;
+@white-key-bkg-color: white;
+
+.title-txt {
+    color: red;
+}
+
+.white-key {
+    background-color: @white-key-bkg-color;
+    color: spin(@white-key-bkg-color, 100);
+}
+
+.black-key {
+    background-color: @black-key-bkg-color;
+    color: spin(@black-key-bkg-color, 180);
+}
+
+.white-key, .black-key {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 120px 20px;
+}
+
+#pressable-key:active {
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 9px 15px 0 rgba(0,0,0,0.19);
+}
