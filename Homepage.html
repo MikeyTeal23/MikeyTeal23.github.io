@@ -37,9 +37,19 @@
     }
 
     function changeColor() {
-        var whiteKeys = document.getElementsByClassName("white-key").style.background-color = getRandomColor();
-        var blackKeys = document.getElementsByClassName("black-key").style.background-color = getRandomColor();
+
         document.getElementById("title").style.color = getRandomColor();
+
+        var whiteKeys = document.getElementsByClassName("white-key");
+        var color = getRandomColor();
+        for (var i = 0; i < whiteKeys.length; i++){
+            whiteKeys[i].style.backgroundColor = color;
+        }
+        var blackKeys = document.getElementsByClassName("black-key");
+        var color = getRandomColor();
+        for (var i = 0; i < blackKeys.length; i++){
+            blackKeys[i].style.backgroundColor = color;
+        }
     }
 
     function getRandomColor() {
@@ -50,5 +60,5 @@
         }
         return color;
     }
-   
+
 </script>
